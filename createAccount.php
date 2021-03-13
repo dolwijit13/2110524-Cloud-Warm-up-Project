@@ -9,16 +9,14 @@
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST')
     {
-        $username = getSafe('password');
+        $username = getSafe('username');
         $password = getSafe('password');
         $hashed_password = password_hash($password, PASSWORD_BCRYPT, $options);
-        
-        $result = $client->putItem(array(
-            'TableName' => 'WarmUpProjectUser',
-            'Item' => array(
-                'username'      => array('S' => $username),
-                'password'    => array('S' => $hashed_password),
-            )
-        ));
+
+        $key = $datastore->key('User', $username);
+        $user = $datastore->entity($key, [
+            'password' => $hashed_password
+        ]);
+        $datastore->insert($user);
     }
 ?>

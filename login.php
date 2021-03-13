@@ -12,18 +12,14 @@
         $username = getSafe('username');
         $password = getSafe('password');
 
-        $result = $client->getItem(array(
-            'TableName' => 'WarmUpProjectUser',
-            'Key' => array(
-                "username" => array("S" => $username)
-            )
-        ));
-        
-        if($result['Item'] == null){
+	$key = $datastore->key('User', $username);
+        $user = $datastore->lookup($key);
+
+        if($user == null) {
             echo 'Invalid username or password.';
         }
         else {
-            if (password_verify($password, $result['Item']['password']['S'])) {
+            if (password_verify($password, $user->password)) {
                 echo 'Logged in';
             } else {
                 echo 'Invalid username or password.';

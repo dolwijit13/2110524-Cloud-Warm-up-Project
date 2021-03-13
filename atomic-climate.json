@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "atomic-climate-307312",
+  "private_key_id": "7228d43a0802372ba489d560451db3c99d2e7144",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCM0sWCwn5NhIWG\nF860mm6fglpU6Lu0xfxtznO05GDeWeaerjfGUAFhlSkB7Ta7zX7fuW/uDuHtF+7K\n+q35INw9pesIuJx9K8FhKbWSTGU69ZJM8OkNxD80MDfdOI0cIPGdk3VHROwo9rVw\nqnz+mzNNqNHX/aEdwNjjQN5GoksllFftqOYiMpjUvRZ50RYiJsDwJv3oQLYqYVIk\np1EX/BF1j8SdHb7yfZUbhnBMIjOMykUSKczOZWOAb068JJgvfBuNVNiCoTHn9DoA\nWRmufLTNE4P141Xwor+kQbYjT+Pz73TvXKVZ6P4cZPrqvkfkOoKnG3pfsujjnxL8\nEoVq7FzZAgMBAAECggEABjFFB+xZTTuW+wfsOich1vAOnJX83hTINkRqNGHIDDMI\nGAF5eKYfP20ll9z4Z48AZaJkBIQBRZGkOacHFDHQmYHkqVYj5IGyb907i6bCG1L9\n51X/K5CuBlOZ+0d/tgVRVqBru3HxkBYUMbN/ilslCQTT0HOJ3JL0vp6FP7Ymh40T\nD8fHvl8eAiagCfiq0T8sQFyxHsPnaXyNCxNlXwswisgUaSa7aHlnGrV76z+en0pA\nXaZmNFrEtEidnlaa11wPMLo2zh/rMF7xlRPKJOx7B+NFlFIO9jODRjBjqCkWlwTw\nyYQhWB9UFy13sTVsYqVnubMKA63S9lOKvDwWmcYTEQKBgQDF2Blqtw+1HWhGbyBB\nSr5Jabo52SzWEV443dvCHCNTiT/PXCji/QqzxpEK++Rr1vFrPqX874ZDjCdrvbCB\nnMTbuIeSSnlgA8Em3mirkdESdGznipRcpD4R220Cj6l5mTg7J90NozRvmLisl5Ya\nPjLdt/8FYgM6A1S+S8ZbxzZaKQKBgQC2N9GjC7583tDhtefH9RygppkMufyHxqtD\nrp8xLvxYK3As7ic7dL/VkBy5tzFu18fZHPzpqiFrvqSRgbQnGU2/NjPWhHxnUu0/\nH9GQWThNW5azuqfbhy3zMvsGB56TeTzSlWqHpWmNovhByLQXCO20tubq1ARCi14U\nQvZPmtWjMQKBgH8I6CEWlFZmIIuBVUO3W4HGCpaUdW6qzkZTZoU4DhLYgQmDkplV\ng2a17HISFbSM2o1TN7+2iQ6cUr+imFBROjIfRaXQfikBoCd2Dd2Ejqt76GWwHN1z\ndIuAynknh9mVYX7SdOUJ02SIuqPP3cjSAVVOjMiHC61XcDWUcDSEMMkpAoGAXjPD\nTDBxHSsv/9BD8Gr2jtMyApNQS31Y4xeuswWgbZCfYIsKe0FjP2xOfXCIvM4PQl4r\nHj3XI1WezJ6qXSBGwliqOfeqPNxxTJYNiDun0M5NvcL8rpBXIAi2H6rmv0UJPbED\nLvdD93ZOM+wntlTmVuvLu5E6VpCoZX8syYC5e7ECgYAgVgyhHtlPCUZrflcAwJ/I\nRGB/tT0MqqAqWiw8aKozkvatojwC03tKBviFtOOziiJfwZPrhYb19vHCMsvGDBht\ntcq5L35+QlJBMjFo/EDtyS7EJes1uSTQuFaxLaBNYC4onN9WJpGt90wmkQS3z3Rw\nyoi4zpFrkQLKHJk+J+oYGg==\n-----END PRIVATE KEY-----\n",
+  "client_email": "cloud-warmup-proj@atomic-climate-307312.iam.gserviceaccount.com",
+  "client_id": "104031031851375624050",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/cloud-warmup-proj%40atomic-climate-307312.iam.gserviceaccount.com"
+}

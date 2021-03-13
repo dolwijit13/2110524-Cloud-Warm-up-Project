@@ -12,32 +12,23 @@
         $username = getSafe('username');
         $old_password = getSafe('old_password');
         $new_password = getSafe('new_password');
-        
-        $result = $client->getItem(array(
-            'TableName' => 'WarmUpProjectUser',
-            'Key' => array(
-                "username" => array("S" => $username)
-            )
-        ));
-        
-        if($result['Item'] == null){
+
+        $key = $datastore->key('User', $username);
+	$user = $datastore->lookup($key);
+
+        if($user == null) {
             echo 'Invalid username or password.';
         }
         else {
-            if (password_verify($old_password, $result['Item']['password']['S'])) {
+            if (password_verify($old_password, $user->password)) {
                 $hashed_new_password = password_hash($new_password, PASSWORD_BCRYPT, $options);
-                $result = $client->updateItem(array(
-                        'TableName' => 'WarmUpProjectUser',
-                        'Key' => array(
-                            "username" => array("S" => $username),
-                        ),
-                        'AttributeUpdates' => array(
-                            "password" => array(
-                                "Value" => array("S" => $hashed_new_password)
-                            )
-                        )
-                    ));
-                }
+		$transaction = $datastore->transaction();
+                $key = $datastore->key('User', $username);
+                $user = $transaction->lookup($key);
+                $user->password = $hashed_new_password;
+                $transaction->upsert($user);
+                $transaction->commit();
+            }
             else {
                 echo 'Invalid username or password.';
             }
