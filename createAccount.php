@@ -1,4 +1,6 @@
 <?php
+    require_once('config.php');
+    require_once('database.php');
     function getSafe($key){
         if(!array_key_exists($key, $_POST))
             return false;
@@ -7,9 +9,16 @@
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST')
     {
-        $username = getSafe('username');
+        $username = getSafe('password');
         $password = getSafe('password');
+        $hashed_password = password_hash($password, PASSWORD_BCRYPT, $options);
         
-        echo 'createAccount';
+        $result = $client->putItem(array(
+            'TableName' => 'WarmUpProjectUser',
+            'Item' => array(
+                'username'      => array('S' => $username),
+                'password'    => array('S' => $hashed_password),
+            )
+        ));
     }
 ?>

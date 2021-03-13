@@ -1,5 +1,6 @@
 <?php
     require_once('config.php');
+    require_once('database.php');
     function getSafe($key){
         if(!array_key_exists($key, $_POST))
             return false;
@@ -10,15 +11,23 @@
     {
         $username = getSafe('username');
         $password = getSafe('password');
+
+        $result = $client->getItem(array(
+            'TableName' => 'WarmUpProjectUser',
+            'Key' => array(
+                "username" => array("S" => $username)
+            )
+        ));
         
-        $hash = password_hash("rasmuslerdorf", PASSWORD_BCRYPT, $options);
-        echo $hash;
-        if (password_verify('rasmuslerdorf', $hash)) {
-            echo 'Password is valid!';
-        } else {
-            echo 'Invalid password.';
+        if($result['Item'] == null){
+            echo 'Invalid username or password.';
         }
-        
-        echo 'login';
+        else {
+            if (password_verify($password, $result['Item']['password']['S'])) {
+                echo 'Logged in';
+            } else {
+                echo 'Invalid username or password.';
+            }
+        }
     }
 ?>

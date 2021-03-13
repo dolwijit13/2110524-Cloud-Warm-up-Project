@@ -1,3 +1,5 @@
 <?php
     $options = [];
+    $key = '';
+    $secret = '';
 ?>
