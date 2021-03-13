@@ -6,10 +6,10 @@
             return false;
         return trim($_POST[$key]);
     }
-
+    
     if ($_SERVER['REQUEST_METHOD'] === 'POST')
     {
-        $username = getSafe('password');
+        $username = getSafe('username');
         $password = getSafe('password');
         $hashed_password = password_hash($password, PASSWORD_BCRYPT, $options);
         
