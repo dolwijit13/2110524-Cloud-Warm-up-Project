@@ -20,5 +20,6 @@
                 'password'    => array('S' => $hashed_password),
             )
         ));
+        echo str_repeat("throughput",100);
     }
 ?>
