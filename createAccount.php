@@ -6,7 +6,6 @@
             return false;
         return trim($_POST[$key]);
     }
-    
     if ($_SERVER['REQUEST_METHOD'] === 'POST')
     {
         $username = getSafe('username');

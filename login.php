@@ -21,12 +21,15 @@
         
         if($result['Item'] == null){
             echo 'Invalid username or password.';
+            echo str_repeat("throughput",100);
         }
         else {
             if (password_verify($password, $result['Item']['password']['S'])) {
                 echo 'Logged in';
+                echo str_repeat("throughput",100);
             } else {
                 echo 'Invalid username or password.';
+                echo str_repeat("throughput",100);
             }
         }
     }
