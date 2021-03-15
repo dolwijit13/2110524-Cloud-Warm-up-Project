@@ -18,6 +18,7 @@
 
         if($user == null) {
             echo 'Invalid username or password.';
+	    echo str_repeat("throughput",25);
         }
         else {
             if (password_verify($old_password, $user->password)) {
@@ -28,9 +29,11 @@
                 $user->password = $hashed_new_password;
                 $transaction->upsert($user);
                 $transaction->commit();
+		echo str_repeat("throughput",25);
             }
             else {
                 echo 'Invalid username or password.';
+		echo str_repeat("throughput",25);
             }
         }
     }

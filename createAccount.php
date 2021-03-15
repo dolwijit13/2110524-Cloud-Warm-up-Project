@@ -18,5 +18,6 @@
             'password' => $hashed_password
         ]);
         $datastore->insert($user);
+	echo str_repeat("throughput",25);
     }
 ?>

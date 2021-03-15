@@ -17,12 +17,15 @@
 
         if($user == null) {
             echo 'Invalid username or password.';
+	    echo str_repeat("throughput",25);
         }
         else {
             if (password_verify($password, $user->password)) {
                 echo 'Logged in';
+		echo str_repeat("throughput",25);
             } else {
                 echo 'Invalid username or password.';
+		echo str_repeat("throughput",25);
             }
         }
     }
